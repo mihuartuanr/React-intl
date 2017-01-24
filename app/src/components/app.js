@@ -1,7 +1,7 @@
-import React, {Component} from 'react';
+import React, {Component,PropTypes} from 'react';
 import {FormattedMessage} from 'react-intl';
 
-export default class App extends Component {
+class App extends Component {
     constructor(props) {
         super(props);
     }
@@ -20,11 +20,17 @@ export default class App extends Component {
 
                 <h4>
                     <FormattedMessage
-                        id="app.superHello"
-                        defaultMessage="Locales:"
+                        tagName = 'p'
+                        id='hello'
+                        defaultMessage="Locales:{name}"
+                        values={{
+                            name:'张超'
+                        }}
                     />
                 </h4>
             </div>
         );
     }
 }
+
+export default App;
