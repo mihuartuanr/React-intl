@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import {FormattedMessage} from 'react-intl';
-import zh_CN from './locale/zh_CN';
+import {IntlProvider,FormattedMessage} from 'react-intl';
+import en from './locale/en';
 import en_US from './locale/en_US';
 import intl from 'intl';
 import App from './components/app';
@@ -26,6 +26,6 @@ const a =(
 		</IntlProvider>
 )
 ReactDOM.render(
-	{a},
+	a,
 	document.body
 )

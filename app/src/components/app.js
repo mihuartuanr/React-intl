@@ -10,15 +10,17 @@ export default class App extends Component {
         return (
             <div>
                 <h1>
-                    <FormattedMessage
-                        id="zh_CN.hello"
-                        defaultMessage="React Intl Translations Example"
-                    />
+                    <div>
+                        <FormattedMessage
+                            id="hello"
+                            defaultMessage="React Intl Translations Example"
+                        />
+                    </div>
                 </h1>
 
                 <h4>
                     <FormattedMessage
-                        id="app.locales_menu_heading"
+                        id="app.superHello"
                         defaultMessage="Locales:"
                     />
                 </h4>

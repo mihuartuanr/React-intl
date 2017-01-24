@@ -6,7 +6,7 @@ var WebpackDelPlugin = require('webpack-del-plugin');
 
 var ROOT_PATH = path.resolve(__dirname,'./app');
 var SRC_PATH = path.resolve(ROOT_PATH,'./src');
-var DIST_PATH = path.resolve(ROOT_PATH,'./dist');
+var DIST_PATH = path.resolve(__dirname,'./dist');
 var TEM_PATH = path.resolve(ROOT_PATH,'./templates');
 
 module.exports = {
