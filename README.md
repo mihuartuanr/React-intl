@@ -59,6 +59,9 @@
 * 通过`npm run start`利用本地服务器查看
 * 打开浏览器`localhost:3000`查看页面
 
+### 使用效果预览
+![自动映射浏览器语言设置](https://github.com/mihuartuanr/React-intl/blob/master/app/src/images/output.gif)
+
 ### 参考文档
 1. [Format.JS](http://formatjs.io/)
 2. [github/yahoo/react-intl](https://github.com/yahoo/react-intl/)
