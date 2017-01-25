@@ -55,7 +55,7 @@
 ### demo使用方法
 * 安装有nodejs和webpack环境；
 * 克隆或下载下来的文件夹进行`npm init -y`
-* 安装依赖`pm install`
+* 安装依赖`npm install`
 * 通过`npm run start`利用本地服务器查看
 * 打开浏览器`localhost:3000`查看页面
 
