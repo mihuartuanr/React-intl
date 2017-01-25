@@ -1,7 +1,7 @@
 {
   "name": "i18n",
   "version": "1.0.0",
-  "description": "",
+  "description": "* React-intl的应用依赖于`Internationaliztion API`，这些APIs现代浏览器和NodeJS（>0.12）内涵；\r * 对于老版浏览器需要[搭建一些环境](http://formatjs.io/guides/runtime-environments/)；",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -26,5 +26,13 @@
     "webpack-del-plugin": "0.0.1",
     "webpack-dev-server": "^1.16.2",
     "webpack-notifier": "^1.5.0"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mihuartuanr/React-i18n.git"
+  },
+  "bugs": {
+    "url": "https://github.com/mihuartuanr/React-i18n/issues"
+  },
+  "homepage": "https://github.com/mihuartuanr/React-i18n#readme"
 }
