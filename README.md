@@ -1,4 +1,4 @@
-# React-i18n Internationaliztion API
+# React-intl Internationaliztion API
 
 ### API应用环境
 * React-intl的应用依赖于`Internationaliztion API`，这些APIs现代浏览器和NodeJS（>0.12）内涵；
