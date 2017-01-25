@@ -11,7 +11,8 @@ var TEM_PATH = path.resolve(ROOT_PATH,'./templates');
 
 module.exports = {
 	entry:{
-		bundle:SRC_PATH
+		app:path.resolve(SRC_PATH,'index'),
+		vendors:['react','react-dom','react-intl']
 	},
 	output:{
 		path:DIST_PATH,
@@ -31,7 +32,7 @@ module.exports = {
 			title:'i18n',
 			filename:'index.html',
 			template:path.resolve(TEM_PATH,'./index.html'),
-			chunks:['bundle'],
+			chunks:['app','vendors'],
 			inject:'body'
 		}),
 		new CopyWebpackPlugin([
@@ -39,9 +40,16 @@ module.exports = {
 				to:path.resolve(DIST_PATH,'./images')},
 			{from:path.resolve(SRC_PATH,'./webFonts'),
 				to:path.resolve(DIST_PATH,'./webFonts')},
-			{from:path.resolve(SRC_PATH,'./locale'),
-				to:path.resolve(DIST_PATH,'./locale')}
+            {from:path.resolve(SRC_PATH,'./scripts'),
+                to:path.resolve(DIST_PATH,'./scripts')},
+            {from:path.resolve(SRC_PATH,'./locale'),
+                to:path.resolve(DIST_PATH,'./locale')}
 		]),
         new WebpackDelPlugin({match: DIST_PATH}),
+	    new webpack.optimize.UglifyJsPlugin({minimize: true}),
+    	new webpack.optimize.CommonsChunkPlugin({
+    		name : 'vendors',
+			filename: 'vendors.js'
+        })
 	]
 }

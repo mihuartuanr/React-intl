@@ -1,5 +1,5 @@
 const en_US = {
-            hello:"Hello, zhangchao!",
+            hello:"Hello, Mihuartuanr!",
             superHello:"Hello, { someone } !"
         }    
 export default en_US;

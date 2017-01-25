@@ -1,8 +1,7 @@
 var webpack=require('webpack');
 var path =require('path');
 var HtmlWebpackPlugin = require('html-webpack-plugin');
-var CopyWebpackPlugin = require('copy-webpack-plugin');
-var WebpackDelPlugin = require('webpack-del-plugin');
+var WebpackNotifierPlugin = require('webpack-notifier');
 
 var ROOT_PATH = path.resolve(__dirname,'./app');
 var SRC_PATH = path.resolve(ROOT_PATH,'./src');
@@ -10,13 +9,6 @@ var DIST_PATH = path.resolve(__dirname,'./dist');
 var TEM_PATH = path.resolve(ROOT_PATH,'./templates');
 
 module.exports = {
-	devtool:'eval-source-map', 
-	stats: {
-        errorDetails: true, 
-        colors: false,
-        modules: true,
-        reasons: true
-    },
 	entry:{
 		bundle:SRC_PATH
 	},
@@ -24,6 +16,13 @@ module.exports = {
 		path:DIST_PATH,
 		filename:'[name].js'
 	},
+    devtool:'eval-source-map',
+    stats: {
+        errorDetails: true,
+        colors: false,
+        modules: true,
+        reasons: true
+    },
 	module:{
 		loaders:[
 			{
@@ -41,6 +40,7 @@ module.exports = {
 			chunks:['bundle'],
 			inject:'body'
 		}),
+        new WebpackNotifierPlugin({excludeWarnings: true}),
 		 new webpack.HotModuleReplacementPlugin()
 	],
 	devServer:{

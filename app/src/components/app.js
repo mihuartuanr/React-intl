@@ -1,4 +1,4 @@
-import React, {Component,PropTypes} from 'react';
+import React, {Component} from 'react';
 import {FormattedMessage} from 'react-intl';
 
 class App extends Component {
@@ -21,10 +21,10 @@ class App extends Component {
                 <h4>
                     <FormattedMessage
                         tagName = 'p'
-                        id='hello'
-                        defaultMessage="Locales:{name}"
+                        id='superHello'
+                        defaultMessage="Locales:北京"
                         values={{
-                            name:'张超'
+                            someone:'zxdobest'
                         }}
                     />
                 </h4>
