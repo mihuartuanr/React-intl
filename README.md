@@ -33,6 +33,7 @@
 **重点部分：**[该项目demo单一功能（internationalization）](https://github.com/mihuartuanr/React-i18n)    **demo中每一部分都有详细的讲解**
 * 不知道这个功能是很蹩脚，还是蹩脚，网上的例子几乎没有，[官网的例子](https://github.com/yahoo/react-intl/tree/master/examples/)……我已经无言了，建议不要看[官网](https://github.com/yahoo/react-intl/)了*
 
+{{./app/src/index.js}}
 
 ### 常见问题
 1. [React Intl] Missing locale data for locale: "zh-CN". Using default locale: "en" as fallback.
