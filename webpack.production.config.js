@@ -4,10 +4,10 @@ var HtmlWebpackPlugin = require('html-webpack-plugin');
 var CopyWebpackPlugin = require('copy-webpack-plugin');
 var WebpackDelPlugin = require('webpack-del-plugin');
 
-var ROOT_PATH = path.resolve(__dirname,'./app');
-var SRC_PATH = path.resolve(ROOT_PATH,'./src');
+
+var SRC_PATH = path.resolve(__dirname,'./src');
 var DIST_PATH = path.resolve(__dirname,'./dist');
-var TEM_PATH = path.resolve(ROOT_PATH,'./templates');
+var TEM_PATH = path.resolve(SRC_PATH,'./templates');
 
 module.exports = {
 	entry:{

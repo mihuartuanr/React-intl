@@ -2,12 +2,8 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 // 从'react-intl'中引入addLocaleData,IntlProvider,FormattedMessage三个格式化组件；
 import {addLocaleData,IntlProvider,FormattedMessage} from 'react-intl';
-/*
-*引入与navigator.languages[0]所对应的语言；
-*如果没有引入对应的语言，会使用默认的“en”；
-*导致FormattedMessage的映射不会成功；
-*/
-import enLocaleData from 'react-intl/locale-data/zh';
+import zh from 'react-intl/locale-data/zh';
+import en from 'react-intl/locale-data/en';
 /*
 *引入自定义的映射表；
 *通过与FormattedMessage的id值来当索引映射返回值；
@@ -20,8 +16,8 @@ import App from './components/app';
 *messages返回值为映射表，比如：'react-intl/locale-data/zh'&&'./locale/zh_CN'；
 */
 let messages = {};
-messages["en-US"] = en_US;
 messages["zh-CN"] = zh_CN;
+messages["en-US"] = en_US;
 /*
 *获取浏览器设置的语言；
 *按我demo中的设置，返回["zh-CN", "zh", "en-US", "en"]，排序与语言设置顺序一直；
@@ -31,14 +27,14 @@ const currentLang = languages[0];
 console.log("languages: ", languages);
 console.log("language: ", currentLang);
 // 载入语言数据；
-addLocaleData(enLocaleData);
+addLocaleData([...zh,...en]);
 
 ReactDOM.render(
     // IntlProvider为'react-intl'指定的包裹组件名；
-    <IntlProvider locale={currentLang} messages={messages[currentLang]}>
-        <App />
-    </IntlProvider>,
-    document.body
+	<IntlProvider locale={currentLang} messages={messages[currentLang]}>
+		<App />
+	</IntlProvider>,
+	document.body
 )
 
 /*
